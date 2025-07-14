@@ -14,20 +14,6 @@ body{
   background-color: #535c68;
 }
 
-.bmi-calculator{
-background-color: white;
-padding: 20px;
-width: 800px;
-height: 500px;
-border-radius: 10px;
-display: flex;
-box-shadow: 0 0 10px rgba(0, 0,0, 0.1);
-}
-
-.bmi-calculator img{
-  width: 50%;
-}
-
 .data{
   padding: 15px;
 }
@@ -62,11 +48,11 @@ margin: 10px;
 }
 
 
-.result{
+/* .result{
   margin-top: 20px;
   padding: 10px;
   border: 1px solid blue;
-}
+} */
 
 .result p{
   margin: 10px;

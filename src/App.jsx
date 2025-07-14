@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './App.css'
+import './index.css'
 
 function App() {
 
@@ -49,17 +50,20 @@ function App() {
   }
 
   return (
-    <div className='bmi-calculator'>
+    <div className='bmi-calculator flex  bg-white md:w-[800px] h-[480px]'>
 
-      <img src="./bmi.png" alt="" />
-
+      <div className='w-90 h-90'>
+        <img className='w-full h-full justify-center flex items-center' src="./bmi.png" alt="" />
+      </div>
+     
       <div className="box">
-        <div className="data">
-          <h1>Bmi Calulator</h1>
+
+        <div className="data ">
+          <h1 className='text-sm font-semibold md:text-2xl'>Bmi calculation</h1>
 
           {error && <p className='error'>{error}</p>}
 
-          <div className="input-container">
+          <div className="input-container ">
             <label>Height (cm):</label>
             <input type="text" id='height' value={height} onChange={(e) => setHeight(e.target.value)} />
           </div>
@@ -68,9 +72,9 @@ function App() {
             <input type="text" id='weight' value={weight} onChange={(e) => setWeight(e.target.value)} />
           </div>
           <button onClick={calbmi}>Calculate BMI</button>
-          <button onClick={clear} style={{backgroundColor:'red', color:"white"}}>Clear</button>
+          <button onClick={clear} style={{ backgroundColor: 'red', color: "white" }}>Clear</button>
           {bmi !== null && (
-            <div className="result">
+            <div className="result mt-4 p-4 border border-blue-600">
               <p>Your BMI is : {bmi}</p>
               <p>BMI status: {bmistatus}</p>
             </div>
